@@ -230,92 +230,237 @@ The website must include a separate section for curriculum-wide technical milest
 
 The milestones represent broader C++ skills developed through multiple projects
 
+Original Milestones are:
+1. C++ Fundamentals - 01-02
+2. Object-Oriented Programming - 03-04
+3. Memory Management - 05-06
+4. Algorithms and Data Structures - 04-05
+5. Building Systems and Testing - 01-08
+6. Modern C++ - 06-09
+7. Networking - 07-11
+8. Software Architecture - 07-12
+9. Performance Engineering - 09-12
+10. Production-Quality Development - 10-12
 
 Requirements:
 - Each milestone must have an independent progress bar
-- Each milestone will have subtasks
+- Each milestone will have sub goals displaying the skills that should be learned for each milestone
+- Display completed milestones as a fraction and progress bar
+- Preserve milestone completion independently of project completion
+- Allow milestones to be checked or unchecked manually
 
+Completing a project does not automatically complete an associated milestone
 
+### 2.10 Project Benchmark Standards
+
+Each project must include an independent checklist for evaluating software development qualities
+
+The following standards must be met for each project:
+1. Source Control     - Git repos with meaningful commits
+2. Code Organization  - Separate headers, implementation, and application entry points
+3. Build System       - CMake when dependencies and multiple source files become relevant
+4. Testing            - Unit tests for core functionality 
+5. Documentation      - README with requirements, build instructions, and usage
+6. Error Handling     - Handle invalid inputs, failed operations, and unexpected conditions
+7. Code Quality       - Meaningful names, modular functions, and clear ownership
+8. Completion         - All functional requirements pass testing
 
 Requirements:
-- Display the project ID number
-- Display the Project Name
-- Display the Project Difficulty Level
-- Display the Project Status
-- Display the Project Phase and Phase Name
-
-- Display a percentage of the mandatory requirements completed
-- Display a fraction of mandatory requirements completed
-- Display a progress bar of mandatory requirements completed
-
-- Display a percentage of the stretch goals completed
-- Display a fraction of stretch goals completed
-- Display a progress bar of stretch goals completed
-
-- Display a dropdown to collapse project details
-- Display the project object with technical concepts
-
-- Display a list and fraction of completion for the following:
-  - Functional Requirmeents
-  - Non-Functional Requirements
-  - Technical Requirements
-  - Deliverables
-  - Completion Criteria
-  - Stretch Goals
-
-- Display development notes or reflection as a text box to write in
-
-
-
-1. Updating Progress Tracker
-
-The webpage will update the progress tracker whenever a requirement is complete
-- Progress bar will update real time when a task is complete/incomplete
-- Percentage will update real time when a task is complete/incomplete
-
-2. Updating Stretch Goals
-
-The webpage will update the stretch goals bar whenever a stretch goal is met
-
-3. Reseting all progress
-
-The webpage can reset all progress if the user desires
-
-4. Expand and collapsable details
-
-The webpage can expand and collapse details if the user desires
-- Important details will remain present regardless of collapse
-
-5. Test Cases can be added and deleted per project
-
-Webpage will support the user in creating test cases and shared preconditions to keep track
-- Test cases will support separate fields to fill out for status, description, preconditions, steps, expected results, and actual results
-- Test cases can be added and removed easily
-- Shared preconditions can be added to test case preconditions for simplicity
-- Removing shared preconditions will remove the shared precondition from the test cases
-  - If the shared precondition is in a test case, the user will be warned before doing so.
-
-6. Data will be saved in the back end in case of errors or corruptions.
-
-7. Technical milestone options can be completed to show performance
-
-8. Complete benchmark project standards for each project
-- Source control
-- Code organization
-- Build system
-- Testing
-- Documentation
-- Error Handling
-- Code quality
-- Completion
+- All standards must be independently checked for each project
+- Display completed standards as a fraction
+- Preserve standards independently from project requirements
 
 ## 3. User Interface Requirements
 
+The website will follow a clean, professional, college-course-style visual design
+
+### 3.1 General Layout
+
+- Responsive layout for desktop, tablet, and mobile
+- Consistent spacing, typography, and component styling
+- Clearly distinguishable sections
+- Easy navigation between curriculum sections and projects
+- Avoid unnecessary visual clutter
+- Maintain readability when displaying large amount of project information
+
+### 3.2 Curriculum Dashboard
+
+The main dashboard should display the following:
+- The following for overall curriculum, projects, and stretch goals
+  - Percentage
+  - Progress Bar
+  - Completed out of Total
+- Individual Projects
+
+### 3.3 Project Sections of Curriculum Dashboard
+
+Each project section in the curriculum dashboard provides simplified information:
+- Display project number and title prominently
+- Display difficulty, estimated time, and curriculum phase
+- Display project completion percentage and progress bar
+- Display requirement, stretch goals, and test cases completion progress
+- Display a few requirements that are still yet to be completed
+- Provide a navigation button to view the entire project in a full window
+
+### 3.4 Project Window
+
+Each project will have a window to display in depth details about the project so far
+- Display project number and title prominently
+- Display difficulty, estimated time, and curriculum phase
+- Display project completion percentage and progress bar
+- Display all requirements, stretch goals, deliverables, etc.
+- Provide an additional tab to view all test cases
+- Provide clear access to managing test cases
+- Provide access to development notes and editing
+
+### 3.5 Visual Feedback
+
+Website should provide immediate feedback when the user interacts with it
+
+Examples:
+- Progress bars animate or update when requirements change
+- Completed projects display a distinct completion indicator
+- In-progress projects display a different status indicator
+- Unstarted projects remain visually distinguishable
+- Test cases display their current status
+- Saving operations provide appropriate feedback
+- Reset/Delete operations provide a notification for confirmation
+
+
 ## 4. Data and Application Architecture Requirements
 
-## 5. Non-Functional Requirements
+The website should be organized into separate responsibilities to avoid creating one large script file responsible for everything
+
+### 4.1 Responsibilities
+
+- HTML structure and content
+- CSS Styling and responsive layouts
+- JavaScript application logic
+- Progress calculation
+- Data persistence
+- Test case management
+- Data validation
+- Project and curriculum information
+
+### 4.2 Data Structures
+
+Project information should be stored in a structured format rather than being manually duplicated throughout the HTML
+
+Project data model should support:
+- Project metadata
+- Project objectives
+- Technical concepts
+- Functional requirements
+- Non-Functional requirements
+- Stretch Goals
+- Deliverables
+- Completion criteria
+- Development notes
+- Test cases
+- Shared preconditions
+- Project benchmark standards
+- Requirement completion states
+
+Technical milestones should be stored separately from individual project data
+
+### 4.3 Data Relationships
+
+Applcation should maintain clear relationships between:
+- Curriculum and its 12 projects
+- Projects and their requirements
+- Projects and their test cases
+- Test cases and their shared preconditions
+- Projects and their benchmark standards
+- The curriculum and its technical milestones
+
+### 4.4 Maintainability
+
+- Avoid code duplication
+- Use reusable JavaScript functions
+- Keep progress calculations centralized
+- Separate data from presentation
+- Use consistent naming conventions
+- Avoid unnecessary global variables
+- Make it possible to add or modify project content without rewriting the application logic
+
+## Non-Functional Requirements
+
+### 5.1 Reliability
+
+- User progress must not disappear after normal page refreshes or browser restarts
+- Saving and loading must handle errors safely
+- Invalid data must not silently overwrite valid saved information
+
+### 5.2 Performance
+
+- Progress calculation should be executed efficiently
+- UI updates should not require full page reloads
+- Website should remain responsive when all 12 projects and test cases are present
+
+### 5.3 Usability
+
+- All interactive controls should be easy to identify
+- Dropdowns must be large enough to interact with comfortably
+- Important information should be accessible without excessive navigation
+- Destructive actions must require confirmation
+
+### 5.4 Accessibility
+
+- Use semantic HTML elements
+- Interactive controls must have accessible labels
+- Support keyboard navigation
+- Maintain sufficient text/background contrast
+- Do not rely exclusively on color to communicate project status
+
+### Browser Compatibility
+
+- Support modern versions of commonly used browsers
+- Avoid relying on browser-specific functionality unless necessary
+
 
 ## 6. Testing Requirements
+
+The website itself must be tested to verify that its features behave correctly:
+
+### 6.1 Progress Tracking Tests
+
+- Checking a mandatory requirement increases project progress
+- Unchecking a mandatory requirement decreases project progress
+- Checking a stretch goal does not affect mandatory progress
+- Completing all mandatory requirements marks a project complete
+- Unchecking a mandatory requirement removes the completed status
+- Overall curriculum statistics update correctly
+- Project status counts always add up to 12
+
+### 6.2 Persistenct Tests
+
+- Progress survives a page refresh
+- Progress survives closing and reopening the broswer
+- Development notes are saved correctly
+- Test cases are saved correctly
+- Imported data restores the expected progress
+- Invalid data restores the expected progress
+- Invalid imported data does not overwrite existing information
+- Recovery from a corrupted save is handled appropriately
+
+### 6.3 Test Case Management Tests
+
+- Users can create test cases
+- Users can edit test cases
+- Users can delete test cases
+- Test case fields save correctly
+- Shared preconditions can be attached to multiple test cases
+- Deleting an unused shared precondition works
+- Deleting a reference shared preconditoins requires confirmation
+- Confirmed deletion removes reference without deleting unrelated test case information
+
+### 6.4 UI Tests
+
+- Project sections expand and collapse correctly
+- Project progress remains accurate after expanding or collapsing sections
+- All interactive controls work
+- Responsive layouts remain usable on smaller screens
+- Reset/Delete operations require confirmation
 
 ## 7. Acceptance Criteria
 
@@ -338,7 +483,18 @@ The website will be considered functionally complete when:
 - The website is responsive and usable.
 - The application passes its essential functional tests.
 
-## 8. Project Goals
+## 8. Initial Technical Direction
+
+Core Technologies:
+- HTML5
+- CSS
+- JavaScript
+- JSON
+
+Storage Architecture
+- LocalStorage
+
+## 9. Project Goals
 
 The final website will serve as a long-term personal development tracker throughout the entire C++ Curriculum.
 
