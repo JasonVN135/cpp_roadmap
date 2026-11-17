@@ -1,0 +1,118 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    box-sizing: border-box;
+}
+
+:root {
+    /* Add fallback hex colors */
+    --color-black-darkest: #0d0d0d;
+    --color-black-darkest-hsl: hsl(0, 0%, 5%);
+    --color-black-dark: #171717;
+    --color-black-dark-hsl: hsl(0, 0%, 9%);
+    --color-black-base: #212121;
+    --color-black-base-hsl: hsl(0, 0%, 13%);
+    --color-black-light: #2b2b2b;
+    --color-black-light-hsl: hsl(0, 0%, 17%);
+    --color-black-lightest: #353535;
+    --color-black-lightest-hsl: hsl(0, 0%, 21%);
+
+    --color-white-darkest: #999999;
+    --color-white-darkest-hsl: hsl(0, 0%, 60%);
+    --color-white-dark: #b3b3b3;
+    --color-white-dark-hsl: hsl(0, 0%, 70%);
+    --color-white-base: #cccccc;
+    --color-white-base-hsl: hsl(0, 0%, 80%);
+    --color-white-light: #e6e6e6;
+    --color-white-light-hsl: hsl(0, 0%, 90%);
+    --color-white-lightest: #ffffff;
+    --color-white-lightest-hsl: hsl(0, 0%, 100%);
+
+    --color-primary-darkest: #0f8a7b;
+    --color-primary-darkest-hsl: hsl(173, 80%, 30%);
+    --color-primary-dark: #12a190;
+    --color-primary-dark-hsl: hsl(173, 80%, 35%);
+    --color-primary-base: #14B8A6;
+    --color-primary-base-hsl: hsl(173, 80%, 40%);
+    --color-primary-light: #17cfb9;
+    --color-primary-light-hsl: hsl(173, 80%, 45%);
+    --color-primary-lightest: #19e6ce;
+    --color-primary-lightest-hsl: hsl(173, 80%, 50%);
+
+    --color-accent-darkest: #8059f8;
+    --color-accent-darkest-hsl: hsl(255, 92%, 66%);
+    --color-accent-dark: #9371f9;
+    --color-accent-dark-hsl: hsl(255, 92%, 71%);
+    --color-accent-base: #A78BFA;
+    --color-accent-base-hsl: hsl(255, 92%, 76%);
+    --color-accent-light: #b8a2fb;
+    --color-accent-light-hsl: hsl(255, 92%, 81%);
+    --color-accent-lightest: #cbbafc;
+    --color-accent-lightest-hsl: hsl(255, 92%, 86%);
+
+    --color-secondary-darkest: #d65c05;
+    --color-secondary-darkest-hsl: hsl(25, 95%, 43%);
+    --color-secondary-dark: #ef6706;
+    --color-secondary-dark-hsl: hsl(25, 95%, 48%);
+    --color-secondary-base: #F97316;
+    --color-secondary-base-hsl: hsl(25, 95%, 53%);
+    --color-secondary-light: #fa832e;
+    --color-secondary-light-hsl: hsl(25, 95%, 58%);
+    --color-secondary-lightest: #fa9247;
+    --color-secondary-lightest-hsl: hsl(25, 95%, 63%);
+
+    /* ITEM STATUS COLORS */
+    --color-empty: #737373;
+    --color-progress: #3B82F6;
+    --color-complete: #22C55E;
+
+    /* Text Colors */
+    --color-text-primary: var(--color-white-lightest);
+    --color-text-muted: var(--color-white-darkest);
+
+    /* MAIN USED COLORS */
+    --color-background: var(--color-black-darkest);
+    --color-card: var(--color-black-dark);
+    --color-input: var(--color-black-base);
+    --color-border: var(--color-black-light);
+    --color-highlight: var(--color-black-lightest);
+
+    /* Typography */
+    --font-family-primary: 'Barlow', 'sans-serif';
+    --font-family-secondary: "Barlow", 'sans-serif';
+
+    --typography-body-largest: 1.4rem / 1.5em var(--font-family-primary);
+    --typography-body-large: 1.1rem / 1.5em var(--font-family-primary);
+    --typography-body-base: 1.1rem / 1.5em var(--font-fam   ily-primary);
+    --typography-body-small: 0.8rem / 1.5em var(--font-family-primary);
+    --typography-body-smallest: 0.6rem / 1.5em var(--font-family-primary);
+    --typography-heading-largest: 600 3rem/1.2em var(--font-family-secondary);
+    --typography-heading-large: 600 2rem/1.2em var(--font-family-secondary);
+    --typography-heading-medium: 600 1.75rem/ 1.2em var(--font-family-secondary);
+    --typography-heading-small: 600 1.5rem/ 1.2em var(--font-family-secondary);
+    --typography-heading-smallest: 600 1.15rem/ 1.2em var(--font-family-secondary);
+    --typography-title: 600 3rem/1.2em var(--font-family-secondary);
+
+    /* Spacing Scale */
+    --spacing-2xs: 4px;
+    --spacing-xs: 8px;
+    --spacing-sm: 12px;
+    --spacing-md: 16px;
+    --spacing-lg: 24px;
+    --spacing-xl: 32px;
+    --spacing-2xl: 48px;
+    --spacing-3xl: 64px;
+    --spacing-4xl: 96px;
+    --spacing-5xl: 192px;
+
+    --mobile-width: 800px;
+
+    --side-padding-full: var(--spacing-4xl);
+    --side-padding-mobile: var(--spacing-md);
+    --section-margin-full: var(--spacing-5xl);
+    --section-margin-mobile: var(--spacing-4xl);
+
+    --navbar-height: var(--spacing-4xl);
+    --sidebar-width: 400px;
+}
