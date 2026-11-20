@@ -65,11 +65,13 @@
     /* ITEM STATUS COLORS */
     --color-empty: #737373;
     --color-progress: #3B82F6;
+    --color-complete-light: #3dda77;
     --color-complete: #22C55E;
+    --color-complete-hsl: 142, 71%, 45%;
 
     /* Text Colors */
     --color-text-primary: var(--color-white-lightest);
-    --color-text-muted: var(--color-white-darkest);
+    --color-text-muted: var(--color-white-dark);
 
     /* MAIN USED COLORS */
     --color-background: var(--color-black-darkest);
@@ -82,19 +84,20 @@
     --font-family-primary: 'Barlow', 'sans-serif';
     --font-family-secondary: "Barlow", 'sans-serif';
 
-    --typography-body-largest: 1.4rem / 1.5em var(--font-family-primary);
-    --typography-body-large: 1.1rem / 1.5em var(--font-family-primary);
-    --typography-body-base: 1.1rem / 1.5em var(--font-fam   ily-primary);
-    --typography-body-small: 0.8rem / 1.5em var(--font-family-primary);
-    --typography-body-smallest: 0.6rem / 1.5em var(--font-family-primary);
+    --typography-body-largest: 1.4rem / 1.5em var(--font-family-secondary);
+    --typography-body-large: 1.2rem / 1.5em var(--font-family-secondary);
+    --typography-body-base: 1.1rem / 1.5em var(--font-family-secondary);
+    --typography-body-small: 0.8rem / 1.5em var(--font-family-secondary);
+    --typography-body-smallest: 0.6rem / 1.5em var(--font-family-secondary);
     --typography-heading-largest: 600 3rem/1.2em var(--font-family-secondary);
     --typography-heading-large: 600 2rem/1.2em var(--font-family-secondary);
     --typography-heading-medium: 600 1.75rem/ 1.2em var(--font-family-secondary);
     --typography-heading-small: 600 1.5rem/ 1.2em var(--font-family-secondary);
-    --typography-heading-smallest: 600 1.15rem/ 1.2em var(--font-family-secondary);
-    --typography-title: 600 3rem/1.2em var(--font-family-secondary);
+    --typography-heading-smallest: 500 1.15rem/ 1.5em var(--font-family-secondary);
+    --typography-title: 600 2.5rem/1.2em var(--font-family-secondary);
 
     /* Spacing Scale */
+    --spacing-3xs: 2px;
     --spacing-2xs: 4px;
     --spacing-xs: 8px;
     --spacing-sm: 12px;
@@ -110,9 +113,78 @@
 
     --side-padding-full: var(--spacing-4xl);
     --side-padding-mobile: var(--spacing-md);
-    --section-margin-full: var(--spacing-5xl);
-    --section-margin-mobile: var(--spacing-4xl);
+    --section-margin-full: var(--spacing-3xl);
+    --section-margin-mobile: var(--spacing-2xl);
 
     --navbar-height: var(--spacing-4xl);
     --sidebar-width: 400px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--color-background);
+}
+
+button {
+    cursor: pointer;
+}
+
+a {
+    color: var(--color-text-primary);
+}
+
+#main {
+    margin-top: var(--navbar-height);
+    padding: var(--spacing-2xl) var(--side-padding-full);
+}
+
+/* ====================
+      NAVIGATION BAR
+   ===================*/
+
+#navbar {
+    padding: 0 var(--spacing-2xl);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: var(--navbar-height);
+    z-index: 500;
+
+    background-color: var(--color-card);
+}
+
+#navbar .normal {
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* PROGRESS BAR */
+
+.meter {
+    height: 8px;
+    position: relative;
+    background: var(--color-border);
+    border-radius: 8px;
+}
+
+.meter > span {
+  display: block;
+  height: 100%;
+  border-radius: 8px;
+  position: relative;
+  overflow: hidden;
+}
+
+.color-complete {
+    background-color: var(--color-complete);
+}
+
+.color-progress {
+    background-color: var(--color-progress);
 }

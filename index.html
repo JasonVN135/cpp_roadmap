@@ -5,17 +5,102 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <link rel="stylesheet" href="static/css/base.css">
-  <link rel="stylesheet" href="static/css/styles.css">
+  <link rel="stylesheet" href="static/css/index.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
 </head>
 <body>
-  <div class="div1">
-    Hello World
-  </div>
-  <div class="div2">
-    Hello World
-  </div>
-  <div class="div3">
-    Hello World
-  </div>
+  <!-- NAVIGATION BAR -->
+  <nav id="navbar">
+
+  </nav>
+  <!-- MAIN CONTENT -->
+  <main id="main">
+    
+    <!--- DASHBOARD SECTION -->
+
+    <section id="section-dashboard">
+      <div class="dashboard">
+        <h1 class="title">C++ Roadmap Tracker</h1>
+        <h3 class="subheading">12 Projects - 10 Technical Milestones - 8 Project Standards</h3>
+        <div class="tracker-container">
+          <div class="dashboard__tracker">
+            Live progress tracker
+          </div>
+        </div>
+        <div class="curriculum-container">
+          <!-- Display statistics in large-->
+          <div class="curriculum-statistics">
+              <div class="statistics statistics--completed">
+                <h3 class="">4/12</h3>
+                <p class="">Projects Completed</p>
+              </div>
+              <div class="statistics statistics--progress">
+                <h3 class="">68%</h3>
+                <p class="">Mandatory requirements</p>
+              </div>
+              <div class="statistics statistics--incomplete">
+                <h3 class="">32%</h3>
+                <p class="">Stretch goals</p>
+              </div>
+          </div>
+          <!-- Display Overall Progress Bar-->
+          <div class="curriculum-progress">
+            <h3> Overall curriculum progress</h3>
+            <div class="progress-sub">
+              <p class="progress-sub--text"> Completed mandatory requirements </p>
+              <p class="progress-sub--percent">68%</p>
+            </div>
+            <div class="meter">
+              <span class="color-complete" style="width: 68% "></span>
+            </div>
+          </div>
+          <!-- Display Completion Breakdown Numbers-->
+          <div class="curriculum-breakdown">
+            <h3>Project completion breakdown</h3>
+            <div class="breakdown-stats">
+              <div class="breakdown-stat breakdown-stat--completed">
+                <p class="breakdown-stat__value">4</p>
+                <p class="breakdown-stat__description">Completed</p>
+              </div>
+              <div class="breakdown-stat breakdown-stat--progress">
+                <p class="breakdown-stat__value">5</p>
+                <p class="breakdown-stat__description">In Progress</p>
+              </div>
+              <div class="breakdown-stat breakdown-stat--incomplete">
+                <p class="breakdown-stat__value">3</p>
+                <p class="breakdown-stat__description">Not Started</p>
+              </div>
+            </div>
+          </div>
+          <!-- Display Individual Requirement Bars-->
+          <div class="curriculum-requirement">
+            <h3>Requirement Completion</h3>
+            <div class="requirement-heading">
+              <p class="requirement-heading--name">Mandatory Requirement</p>
+              <p class="requirement-heading--progress">68/100</p>
+            </div>
+            <div class="meter meter--mandatory">
+              <span class="color-complete" style="width: 68% "></span>
+            </div>
+            <div class="requirement-heading">
+              <p class="requirement-heading--name">Stretch goals</p>
+              <p class="requirement-heading--progress">16/50</p>
+            </div>
+            <div class="meter meter--stretch">
+              <span class="color-progress" style="width: 32% "></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- PROJECT SECTION -->
+    <section id="section-projects">
+
+    </section>
+  </main>
 </body>
 </html>

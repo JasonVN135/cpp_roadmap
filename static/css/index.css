@@ -1,0 +1,170 @@
+
+/* ====================
+      MAIN SECTIONS
+   ===================*/
+
+section {
+    width: 100%;
+
+    min-height: 50px;
+}
+
+#section-dashboard {
+    display: flex;
+    justify-content: center;
+}
+
+/* ====================
+      DASHBOARD
+   ===================*/
+
+.dashboard {
+    width: 50%;
+    min-width: 800px;
+    min-height: 100px;
+
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+
+    padding: var(--spacing-lg) var(--spacing-xl);
+
+    background-color: var(--color-card);
+    color: var(--color-text-primary);
+    border: 1px solid var(--color-border);
+    border-radius: var(--spacing-md);
+}
+
+#section-dashboard .title {
+    font: var(--typography-title);
+}
+
+#section-dashboard .subheading {
+    font: var(--typography-body-small);
+    color: var(--color-text-muted);
+    margin-top: calc(-1 * var(--spacing-sm));
+}
+
+/* ====================
+      TRACKER
+   ===================*/
+
+.tracker-container {
+    display: flex;
+}
+
+.dashboard__tracker {
+    font: var(--typography-body-small);
+    color: var(--color-complete);
+    background-color: hsla(var(--color-complete-hsl), 0.15);
+    padding: var(--spacing-3xs) var(--spacing-xs);
+    border-radius: var(--spacing-xs);
+}
+
+/* ====================
+      CURRICULUM
+   ===================*/
+
+.curriculum-container {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-lg);
+}
+
+/* Statistics */
+
+.curriculum-statistics {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.curriculum-statistics h3 {
+    font: var(--typography-heading-small);
+}
+
+.curriculum-statistics p {
+    font: var(--typography-body-small);
+    color: var(--color-text-muted);
+}
+
+/* Overall Progress */
+
+.curriculum-progress {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+}
+
+.curriculum-progress h3 {
+    font: var(--typography-heading-smallest);
+}
+
+.curriculum-progress .progress-sub {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font: var(--typography-body-small);
+}
+
+.curriculum-progress .progress-sub--text {
+    color: var(--color-text-muted);
+}
+
+/* Breakdown */
+
+.curriculum-breakdown {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+}
+
+.curriculum-breakdown h3 {
+    font: var(--typography-heading-smallest);
+}
+
+.curriculum-breakdown .breakdown-stats {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.breakdown-stat__value {
+    font: var(--typography-body-base);
+}
+
+.breakdown-stat--completed .breakdown-stat__value {
+    color: var(--color-complete);
+}
+
+.breakdown-stat--progress .breakdown-stat__value {
+    color: var(--color-progress);
+}
+
+.breakdown-stat__description {
+    font: var(--typography-body-small);
+    color: var(--color-text-muted);
+}
+
+/* Requirements */
+
+.curriculum-requirement {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+}
+
+.curriculum-requirement h3 {
+    font: var(--typography-heading-smallest);
+}
+
+.requirement-heading {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: var(--color-text-muted);
+}
+
+.curriculum-requirement .meter {
+    margin-bottom: var(--spacing-xs);
+}
